@@ -1,0 +1,11 @@
+寒蝉手拙体 / ChillZhuo v2.500
+作者：寒蝉字型 ChillType
+官方项目：https://github.com/Warren2060/ChillShouZhuo
+下载：https://github.com/Warren2060/ChillShouZhuo/blob/main/ChillZhuo_v2.500.zip
+获取日期：2026-11-22
+
+作者 README 授权说明：
+使用范围：免费授权全社会使用（包括商用）。
+分享请标注作者为寒蝉字型
+
+ChillZhuo.woff2 为作者发布压缩包中的原始网页字体，未经修改。
