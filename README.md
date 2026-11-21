@@ -8,7 +8,18 @@
 
 ## GitHub Pages
 
-将 `index.html`、`style.css`、`script.js` 和 `assets/` 目录上传到 GitHub 仓库根目录，在仓库 Settings → Pages 选择 Deploy from a branch，选择对应分支及 `/ (root)`。网页使用相对路径，也可放在项目仓库中。
+网站由 GitHub Pages 从 `main` 分支的仓库根目录发布。静态文件使用相对路径，无需构建。
+
+## 维护笔记
+
+每篇笔记对应 `notes/` 下一个 HTML 文件。点击首页「笔记与心得」中的条目会在新标签页阅读，也可以直接分享单篇的网址。
+
+1. 新增笔记时，复制 `notes/learning.html` 为 `notes/my-new-note.html`。文件名用小写英文字母、数字和短横线。
+2. 修改新文件中的 `<title>`（标签页标题）、`<h1>`（文章标题）、`note-label`（分类）和正文。每段用一对 `<p>…</p>`，小标题用 `<h2>…</h2>`。
+3. 在 `index.html` 的 `note-list` 内复制一条现有的 `<a class="note-row">`，把 `href` 改为 `./notes/my-new-note.html`，同步修改分类和标题。保留 `target="_blank" rel="noopener"`。列表顺序由这些链接的排列顺序决定。
+4. 把改动提交并推送到 `main`，等 GitHub Pages 部署完成即可访问。可先运行 `node server.cjs` 检查本地效果。
+
+改正文只需要编辑对应的 HTML 文件。改标题或分类时，同步更新首页条目。建议保留原文件名，已分享的文章链接就能继续使用。
 
 ## 后续替换
 

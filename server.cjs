@@ -11,7 +11,10 @@ http.createServer((req, res) => {
   catch { res.writeHead(400); res.end('Bad request'); return; }
   if (pathname === '/') pathname = '/index.html';
   const file = path.resolve(root, '.' + pathname);
-  if (!file.startsWith(root + path.sep) || !publicFiles.includes(path.relative(root, file))) {
+  const relative = path.relative(root, file);
+  const isNote = path.dirname(relative) === 'notes' &&
+    /^[a-z0-9][a-z0-9-]*\.(?:html|css)$/.test(path.basename(relative));
+  if (!file.startsWith(root + path.sep) || (!publicFiles.includes(relative) && !isNote)) {
     res.writeHead(404); res.end('Not found'); return;
   }
   fs.readFile(file, (error, data) => {

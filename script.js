@@ -3,9 +3,6 @@ const title = document.querySelector('#dialog-title');
 const category = document.querySelector('#dialog-category');
 const body = document.querySelector('#dialog-body');
 const entries = {
-  learning: ['学习笔记 · 示例', '把一个知识点讲清楚，比记住它更有意思。', '这里会放一篇完整的学习笔记。可以写一个刚理解的概念、一种学习方法，或者从踩坑到解决问题的过程。', '这一版先展示阅读体验；标题和正文之后都换成你的真实内容。'],
-  intern: ['实习碎片 · 示例', '第一次实习，我想先学会好好提问。', '这里可以记录实习中的观察、一次沟通的心得，以及从陌生到熟悉的成长过程。', '这是内容占位，不代表你的实际实习经历。'],
-  life: ['生活随想 · 示例', '允许自己，慢一点找到喜欢的事。', '不一定每篇文章都要有一个结论。这里也可以放还没有想明白的问题、读完一本书的感受，或者一个突然冒出来的念头。', '这一版先保留轻松的阅读版式，等待你的真实文字。'],
   website: ['作品 / 项目 · 示例', '从零开始，搭一个自己的小站', '项目详情页可以介绍：为什么做这个项目、你负责了什么、用到了哪些工具，以及过程中学到了什么。', '后续可以在这里添加项目截图、GitHub 仓库和在线演示地址。'],
   collection: ['作品 / 项目 · 示例', '日常观察收集计划', '这里可以是课程作业、设计练习、小工具，或者一个自己发起的小实验。小项目也值得被认真记录。', '这是版式示例，不是已经完成的真实项目。'],
   colors: ['灵感角落 · 配色实验', '今天的心情，是这些颜色。', '深空黑、金属银与亮橙。安静的空间里，留一点鲜明的信号。', '以后可以替换成你喜欢的配色、海报、展览或设计作品，并补充来源。'],
@@ -26,8 +23,8 @@ function showDetail(key) {
   });
   dialog.showModal();
 }
-document.querySelectorAll('[data-note], [data-project], [data-mood]').forEach(button => {
-  button.addEventListener('click', () => showDetail(button.dataset.note || button.dataset.project || button.dataset.mood));
+document.querySelectorAll('[data-project], [data-mood]').forEach(button => {
+  button.addEventListener('click', () => showDetail(button.dataset.project || button.dataset.mood));
 });
 document.querySelectorAll('.dialog-close, .dialog-done').forEach(button => button.addEventListener('click', () => dialog.close()));
 dialog.addEventListener('click', event => {
