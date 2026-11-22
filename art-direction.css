@@ -30,14 +30,16 @@
 }
 
 .collection-track {
-  padding-inline: 19%;
-  scroll-padding-inline: 19%;
+  --collection-card-width: clamp(144px, 45vw, 204px);
+  padding-inline: calc((100% - var(--collection-card-width)) / 2);
+  scroll-padding-inline: 0;
 }
 
 .collection-card {
   position: relative;
+  flex: 0 0 var(--collection-card-width);
   min-width: 0;
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 5 / 8;
   overflow: hidden;
   background: #141c28;
 }
@@ -80,15 +82,6 @@
   .about-portrait {
     width: min(48vw, 210px);
     margin-inline: 0;
-  }
-
-  .collection-track {
-    padding-inline: 13%;
-    scroll-padding-inline: 13%;
-  }
-
-  .collection-card {
-    aspect-ratio: 4 / 3;
   }
 }
 
