@@ -168,7 +168,7 @@ if (!reducedMotion.matches && 'IntersectionObserver' in window) {
       }
     });
   }, { threshold: .08 });
-  document.querySelectorAll('.about-copy,.section-heading,.project-card,.mood-card').forEach(element => {
+  document.querySelectorAll('.about-portrait,.about-copy,.section-heading,.project-card,.mood-card,.closing-content').forEach(element => {
     element.classList.add('reveal-ready');
     reveals.observe(element);
   });

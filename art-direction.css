@@ -29,6 +29,11 @@
   border-radius: 0;
 }
 
+.collection-track {
+  padding-inline: 19%;
+  scroll-padding-inline: 19%;
+}
+
 .collection-card {
   position: relative;
   min-width: 0;
@@ -77,7 +82,48 @@
     margin-inline: 0;
   }
 
+  .collection-track {
+    padding-inline: 13%;
+    scroll-padding-inline: 13%;
+  }
+
   .collection-card {
     aspect-ratio: 4 / 3;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero .title-little,
+  .hero .title-universe {
+    animation: hero-title-in 720ms cubic-bezier(.2, .7, .25, 1) both;
+  }
+
+  .hero .title-universe {
+    animation-delay: 100ms;
+  }
+
+  .hero-description,
+  .hero-actions {
+    animation: hero-title-in 560ms ease-out 220ms both;
+  }
+
+  .collection-card img {
+    transition: transform 620ms cubic-bezier(.2, .7, .25, 1);
+  }
+
+  .collection-card.is-selected img {
+    transform: scale(1.045);
+  }
+}
+
+@keyframes hero-title-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
