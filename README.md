@@ -37,5 +37,5 @@
 最新视觉：宇航员摄影、镂空粗体、毛玻璃面板。art-direction.css 为当前覆盖样式；底图为 assets/helmet.jpg，关于区为 assets/astronaut.jpg。动效尊重 prefers-reduced-motion。
 
 
-收藏卡片位于 index.html 的 collection-track 中，每张由图片、标题、描述及外链组成，替换 a 的 href 即可设置自己的外链。支持触屏滑动、鼠标拖动和左右方向键；选中卡片居中放大。结尾采用 quiet-earth.jpg 的低矮弧光，前景手写文字使用本地嵌入的寒蝉手拙体 v2.500（作者：寒蝉字型，免费商用），授权来源记录于 assets/fonts/SOURCE.txt。
+收藏卡片位于 index.html 的 collection-track 中，当前卡片只展示图片，右下角箭头可以打开原作。换图时修改 img 的 src 和 alt，再更新原作链接的 href 和 aria-label。支持触屏滑动、鼠标拖动和左右方向键；选中卡片居中放大。结尾采用 quiet-earth.jpg 的低矮弧光，前景手写文字使用本地嵌入的寒蝉手拙体 v2.500（作者：寒蝉字型，免费商用），授权来源记录于 assets/fonts/SOURCE.txt。
 
